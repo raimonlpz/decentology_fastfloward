@@ -60,14 +60,12 @@ pub contract Artist {
   }
 
   pub resource Collection {
-    // pub let pictures: @{String: Picture}
     pub let pictures: @[Picture]
     init() {
         self.pictures <- []
     }
     pub fun deposit(picture: @Picture) {
         // log("pixels ".concat(picture.canvas.pixels))
-        // self.pictures[picture.canvas.pixels] <-! picture
         self.pictures.append(<- picture)
     }
     destroy() {

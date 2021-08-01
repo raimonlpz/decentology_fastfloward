@@ -1,0 +1,39 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"LocalArtist": "./LocalArtist/contract.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "f077c0f5f6a8f83e6dd2987a8fb615c4d4bce84be562af0a26c1e096aec2a485"
+		},
+		"testnet-local-artist": {
+			"address": "0xeb8ce8764f1e2bb5",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "3461d6bd13184fea58d8dbb0736aa06972a12fa518d18f9991a3a158805c16c0"
+			}
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"testnet-local-artist": [
+				"LocalArtist"
+			]
+		}
+	}
+}
